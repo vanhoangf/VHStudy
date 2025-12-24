@@ -1055,6 +1055,10 @@ body {
         justify-content: center;
     }
 
+    .navbar ul li a {
+        display: none;
+    }
+
     /* Ẩn nút Đăng nhập/Đăng ký trên mobile cho gọn (hoặc giữ lại tùy bạn) */
     .dang {
         margin-bottom: 10px;
