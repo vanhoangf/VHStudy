@@ -127,25 +127,6 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-//     if (btnDangNhap) {
-//     btnDangNhap.addEventListener('click', function(e) {
-//         // 1. Ngăn không cho form load lại trang
-//         e.preventDefault(); 
-
-//         // 2. Lấy GIÁ TRỊ (value) hiện tại trong ô input và xóa khoảng trắng thừa (.trim())
-//         let username = tendn.value.trim();
-//         let password = mk.value.trim();
-
-//         // 3. Kiểm tra logic
-//         if (username === "" && password === "")
-//             alert("Tên đăng nhập và mật khẩu không được để trống!"); 
-//         else if (username === "")
-//             alert("Tên đăng nhập không được để trống!");
-//         else if (password === "") 
-//             alert("Mật khẩu không được để trống!");
-//     });
-// }
-
     if(btnDangNhap) {
         btnDangNhap.addEventListener('click', function(e) {
             e.preventDefault();
