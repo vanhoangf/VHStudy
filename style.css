@@ -1129,7 +1129,6 @@ body {
     .footer-nd {
         grid-template-columns: 1fr; /* 1 Cột */
         text-align: center;
-        padding: 0 20px 40px;
     }
 
     .footer-cot ul {
