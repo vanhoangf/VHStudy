@@ -1132,6 +1132,10 @@ body {
         padding: 0 20px 40px;
     }
 
+    .footer-cot ul {
+        padding-left: 0;
+    }
+
     .footer-cot h3::after {
         left: 50%; 
         transform: translateX(-50%);
