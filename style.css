@@ -964,3 +964,159 @@ body {
 .dn-footer p a:hover{
     color: rgb(16, 143, 228);
 }
+
+/* ====================================================== */
+/* RESPONSIVE (MOBILE & TABLET)              */
+/* ====================================================== */
+
+/* --- 1. TABLET (iPad dọc, Máy tính bảng) --- */
+/* Kích thước: Từ 768px đến 1023px */
+@media (min-width: 768px) and (max-width: 1023px) {
+    
+    html {
+        font-size: 55%; /* Giảm size chữ đi một chút cho gọn */
+    }
+
+    /* Navbar: Giảm padding 2 bên */
+    .navbar {
+        padding: 0 20px;
+    }
+
+    /* Banner: Giảm khoảng cách */
+    .banner {
+        padding: 0 4%;
+        gap: 30px;
+    }
+    
+    .banner-nd h1 {
+        font-size: 3.6rem;
+    }
+
+    /* Trang chi tiết: Giảm gap khổng lồ 200px xuống */
+    .bocuc-kh {
+        gap: 40px; 
+        padding: 40px 4%;
+        flex-direction: column; /* Sidebar rớt xuống dưới */
+    }
+
+    .sidebar {
+        width: 100%; /* Sidebar chiếm hết chiều ngang */
+        position: static; /* Bỏ dính */
+    }
+
+    .sidebar-thekh {
+        width: 100%; /* Thẻ khóa học trong sidebar to ra */
+        flex-direction: row; /* Xoay ngang thẻ sidebar cho đẹp trên tablet */
+        align-items: center;
+    }
+    
+    .sidebar-thekh .the-kh-top {
+        width: 200px; /* Cố định chiều rộng ảnh */
+        height: 100%;
+    }
+    
+    .sidebar-thekh .the-kh-bot {
+        padding: 20px;
+    }
+
+    /* Grid khóa học: Chia 2 cột */
+    .kh.view-grid .kh-truot {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* --- 2. MOBILE (Điện thoại) --- */
+/* Kích thước: Dưới 767px */
+@media (max-width: 767px) {
+    
+    html {
+        font-size: 50%; /* Giảm size chữ nhỏ hơn nữa */
+    }
+
+    /* --- Navbar: Xếp chồng dọc --- */
+    .navbar {
+        height: auto; /* Bỏ chiều cao cố định */
+        flex-direction: column;
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .chucnang ul {
+        flex-wrap: wrap; /* Cho phép menu xuống dòng nếu quá dài */
+        gap: 15px;
+    }
+
+    /* --- Banner: Ảnh lên trên, Chữ xuống dưới --- */
+    .banner {
+        flex-direction: column-reverse; /* Đảo ngược: Ảnh lên đầu */
+        justify-content: center;
+        text-align: center; /* Căn giữa nội dung */
+        padding: 40px 20px;
+        min-height: auto; /* Bỏ chiều cao full màn hình */
+    }
+
+    .banner-btn {
+        justify-content: center; /* Căn giữa nút */
+    }
+
+    .banner-anh img {
+        max-width: 80%; /* Ảnh nhỏ lại chút cho cân đối */
+    }
+
+    /* --- Khóa học (Grid view) --- */
+    /* Khi bấm xem chi tiết, chuyển về 1 cột duy nhất */
+    .kh.view-grid .kh-truot {
+        grid-template-columns: 1fr; 
+    }
+    
+    /* Thẻ khóa học full màn hình */
+    .kh.view-grid .the-kh {
+        width: 100%;
+    }
+
+    /* --- Trang chi tiết khóa học --- */
+    .bocuc-kh {
+        flex-direction: column; /* Xếp dọc */
+        gap: 30px;
+        padding: 20px;
+    }
+
+    .bocuc-chinh {
+        width: 100%;
+    }
+
+    .sidebar {
+        width: 100%;
+        position: static;
+    }
+
+    .sidebar-thekh {
+        width: 100%;
+    }
+
+    /* Video: Đảm bảo không bị méo */
+    .video video {
+        height: auto;
+        aspect-ratio: 16/9;
+    }
+
+    /* --- Footer: Xếp dọc 1 cột --- */
+    .footer-nd {
+        grid-template-columns: 1fr; /* 1 Cột duy nhất */
+        text-align: center;
+    }
+
+    .footer-cot h3::after {
+        left: 50%; /* Căn giữa gạch chân tiêu đề */
+        transform: translateX(-50%);
+    }
+
+    .footer-mxh, .tt-lienhe {
+        justify-content: center; /* Căn giữa icon */
+    }
+
+    /* --- Modal Đăng nhập --- */
+    .dn-nd {
+        width: 90%; /* Form chiếm 90% màn hình đt */
+    }
+}
